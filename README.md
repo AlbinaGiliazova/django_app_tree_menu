@@ -60,7 +60,7 @@ Tree menu app for Django
 ---------------------------
 
 1) В нужном шаблоне загрузите тег:
-      {% load tree_menu_tags %}
+      {% load menu_tags %}
    
 2) Вставьте:
       {% draw_menu 'main_menu' %}
