@@ -1,0 +1,11 @@
+<li class="{% if item.id == active_id %}active{% endif %}">
+  <a href="{{ item.get_url }}">{{ item.title }}</a>
+  {# Если этот пункт надо раскрыть и у него есть дети #}
+  {% if item.id in expanded_ids and item.sub_items %}
+    <ul>
+    {% for child in item.sub_items %}
+        {% include "menu/menu_node.html" with item=child %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+</li>    
